@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 import Anchor from "./anchor";
 
 export default function Header({
-  Texts = ["Logo", "Home", "About", "Services", "Contact"],
-  navLinks = ["#home", "#about", "#services", "#contact"],
+  Texts = ["Logo", "Home", "About", "Contact"],
+  navLinks = ["#home", "#about", "#contact"],
 }) {
   return (
-    <header className="container flex justify-between">
+    <header className="container flex justify-between p-5 border-b-2 border-greyThm  z-10">
       <p className="font-oswald font-bold text-2xl text-whiteThm">{Texts[0]}</p>
       <nav>
         <ul className="flex">
