@@ -5,8 +5,8 @@ export default function Button({ Text, onClick, bgColor = 1, id }) {
     <button
       className={`text-whiteThm ${
         bgColor
-          ? "bg-[var(--color-cyanThm)] hover:bg-[var(--color-cyanThm)]/90"
-          : "bg-[#393E46] hover:bg-[#393E46]/90"
+          ? "bg-cyanThm hover:bg-cyanThm/90"
+          : "bg-greyThm hover:bg-greyThm/90"
       } text-lg rounded-3xl px-8 py-2 font-poppins font-bold cursor-pointer [text-shadow:_0_2px_4px_var(--color-darkBlueThm)] 
       relative overflow-hidden transition-all duration-300 
       hover:scale-105

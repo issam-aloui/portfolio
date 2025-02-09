@@ -44,7 +44,18 @@ function Projects() {
           </div>
         </div>
         <div className="grid grid-cols-4 gap-8 p-12">
-         
+          <ProjectCard
+            url="src\assets\Group 2346.svg"
+            link="https://www.google.com"
+          />
+          <ProjectCard
+            url="src\assets\Group 2346.svg"
+            link="https://www.google.com"
+          />
+          <ProjectCard
+            url="src\assets\Group62.svg"
+            link="https://www.google.com"
+          />
         </div>
       </div>
     </section>

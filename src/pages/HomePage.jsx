@@ -6,10 +6,11 @@ import { FaArrowDown } from "react-icons/fa";
 import lightbulb from "../assets/lightbulb.svg";
 import vector141 from "../assets/Vector141.svg";
 
-
 export default function HomePage() {
   return (
-    <div className="flex flex-col relative overflow-hidden" id="Home">
+    <div
+      className="flex flex-col relative overflow-hidden min-h-screen"
+      id="Home">
       {/* Decorative SVGs */}
       <img
         src={lightbulb}
@@ -26,8 +27,9 @@ export default function HomePage() {
         Texts={["IssamAloui", "Home", "About Me", "Contact"]}
         navLinks={["#Home", "#About", "#Contact"]}
       />
-      {/* Update the container to be more responsive */}
-      <div className="container relative flex flex-col md:flex-row justify-between items-center min-h-[70vh] w-full gap-8 py-8">
+
+      {/* Main content container with full height */}
+      <div className="container flex-1 flex flex-col md:flex-row justify-center items-center gap-8 py-8">
         <HomePageHeading />
         {/* Add responsive classes to control SVG size */}
         <div className="w-full h-auto max-w-[500px]">
@@ -35,11 +37,12 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="flex w-full justify-center items-center h-[10vh]">
+      {/* Arrow section at bottom */}
+      <div className="flex justify-center items-center py-8">
         <a
           href="#About"
-          className="flex flex-col items-center text-white hover:opacity-80 transition-opacity">
-          <FaArrowDown className="text-6xl animate-bounce bg-[#393E46] opacity-75 p-2 rounded-lg" />
+          className="flex flex-col items-center text-whiteThm hover:opacity-80 transition-opacity">
+          <FaArrowDown className="text-6xl animate-bounce bg-greyThm opacity-75 p-2 rounded-lg" />
         </a>
       </div>
     </div>

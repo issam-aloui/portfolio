@@ -1,76 +1,70 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
 
-@theme {
-  --screen-sm: 480px;
-  --screen-md: 768px;
-  --screen-lg: 976px;
-  --screen-xl: 1440px;
-  --font-oswald: Oswald, sans-serif;
-  --font-poppins: Poppins, sans-serif;
-  --color-whiteThm: #eeeeee;
-  --color-cyanThm: #00adb5;
-  --color-greyThm: #393e46;
-  --color-darkBlueThm: #222831;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@layer components {
-  .container {
-    @apply w-[85%] mx-auto px-4;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-oswald);
-    color: var(--color-whiteThm);
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-oswald text-whiteThm;
 }
 
 body {
-  background-color: var(--color-darkBlueThm);
+  @apply bg-darkBlueThm;
 }
 
+/* Add some common text utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+/*
 .container {
   box-sizing: border-box;
   padding: 16px;
-  width: 100%; /* Full width by default */
-  max-width: 100%; /* Start with no max-width */
-  margin-left: auto; /* Center horizontally */
-  margin-right: auto; /* Center horizontally */
-  padding-left: 1rem; /* Add padding for spacing (16px) */
-  padding-right: 1rem; /* Add padding for spacing (16px) */
+  width: 100%; /* Full width by default *
+  max-width: 100%; /* Start with no max-width *
+  margin-left: auto; /* Center horizontally *
+  margin-right: auto; /* Center horizontally 
+  padding-left: 1rem; /* Add padding for spacing (16px) *
+  padding-right: 1rem; /* Add padding for spacing (16px) *
 }
 
 @media (min-width: 480px) {
-  /* Small screens (sm) */
+  /* Small screens (sm) 
   .container {
     max-width: 480px;
   }
 }
 
 @media (min-width: 768px) {
-  /* Medium screens (md) */
+  /* Medium screens (md) 
   .container {
     max-width: 768px;
   }
 }
 
 @media (min-width: 976px) {
-  /* Large screens (lg) */
+  /* Large screens (lg) 
   .container {
     max-width: 976px;
   }
 }
 
 @media (min-width: 1440px) {
-  /* Extra large screens (xl) */
+  /* Extra large screens (xl) 
   .container {
     max-width: 1440px;
   }
 }
+*/
