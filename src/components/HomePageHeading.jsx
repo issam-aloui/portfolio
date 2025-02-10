@@ -7,7 +7,7 @@ export default function HomePageHeading() {
       <img
         src="src/assets/RightArrow.png"
         alt="RightArrow"
-        className="w-16 lg:w-20 mb-4"
+        className="w-16 lg:w-30 mb-4"
       />
       <div className="flex flex-col items-center lg:items-start gap-8">
         <div className="flex flex-col gap-2 text-center lg:text-left">

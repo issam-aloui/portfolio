@@ -8,7 +8,7 @@ export default function Header({
   return (
     <header className="container flex justify-between p-5 border-b-2 border-greyThm  z-10">
       <p className="font-oswald font-bold text-2xl text-whiteThm">{Texts[0]}</p>
-      <nav>
+      <nav className="hidden md:block">
         <ul className="flex">
           {Texts.slice(1).map((text, index) => (
             <li key={navLinks[index]}>

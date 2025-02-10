@@ -44,7 +44,7 @@ export default function AboutMe() {
         </div>
 
         {/* Right Section */}
-        <div className="flex-1 relative flex items-center justify-center p-8">
+        <div className="flex-1 relative flex items-center justify-center p-8  md:block">
           <img
             src="/src/assets/doodleitems.svg"
             alt="Doodle elements"

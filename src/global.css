@@ -5,6 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Apply styles to headings */
 h1,
 h2,
 h3,
@@ -12,6 +13,26 @@ h4,
 h5,
 h6 {
   @apply font-oswald text-whiteThm;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Different heading styles */
+h1 {
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.7);
+}
+
+h3 {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+h4,
+h5,
+h6 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -28,6 +49,47 @@ body {
     text-wrap: pretty;
   }
 }
+
+/* Add a class to disable the typing animation when needed */
+.no-typing {
+  animation: none !important;
+  border-right: none !important;
+  white-space: normal !important;
+  width: auto !important;
+  overflow: visible !important;
+}
+
+/* Slider fade animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+.fade-enter {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.fade-exit {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
 /*
 .container {
   box-sizing: border-box;
