@@ -1,6 +1,6 @@
 import lightbulb from "../assets/lightbulb.svg";
 import vector141 from "../assets/Vector141.svg";
-import vector186 from "../assets/Vector186 (1).svg";
+import vector186 from "../assets/Vector 186.svg";
 import doodleItems from "../assets/doodleitems.svg";
 import group62 from "../assets/Group62.svg";
 

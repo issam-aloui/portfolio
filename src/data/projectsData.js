@@ -1,4 +1,6 @@
 // Sample project data - replace with real projects
+import gymFitImage from "../assets/gymFit.png";
+
 export const projectsData = {
   web: [
     {
@@ -6,7 +8,7 @@ export const projectsData = {
       title: "GymFit | Gym Management System",
       description:
         "A comprehensive gym management system platform featuring member management, workout tracking, and location services with real-time updates.",
-      image: "/src/assets/gymFit.png",
+      image: gymFitImage,
       link: "https://github.com/issam-aloui/Gym_Management_System",
       liveLink: null, // Demo not available
       technologies: [
