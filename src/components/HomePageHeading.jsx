@@ -29,7 +29,7 @@ export default function HomePageHeading() {
             Hire Me
           </a>
           <a
-            href="/resume.pdf"
+            href="/portfolio/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-cyanThm text-cyanThm hover:bg-cyanThm hover:text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-all duration-300 hover:scale-105 text-center text-sm sm:text-base">
