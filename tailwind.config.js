@@ -25,10 +25,12 @@ export default {
         "5xl": ["3rem", { lineHeight: "1" }],
       },
       screens: {
+        xs: "375px",
         sm: "480px",
         md: "768px",
         lg: "976px",
         xl: "1440px",
+        "2xl": "1920px",
       },
       container: {
         center: true,
@@ -37,6 +39,16 @@ export default {
           sm: "2rem",
           lg: "4rem",
           xl: "5rem",
+        },
+      },
+      animation: {
+        "spin-slow": "spin 8s linear infinite",
+        "reverse-spin": "reverse-spin 12s linear infinite",
+      },
+      keyframes: {
+        "reverse-spin": {
+          from: { transform: "rotate(360deg)" },
+          to: { transform: "rotate(0deg)" },
         },
       },
     },

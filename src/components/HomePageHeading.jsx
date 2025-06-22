@@ -1,29 +1,40 @@
 // src/components/HomePageHeading.jsx
-import Button from "../components/button";
+import rightArrow from "../assets/RightArrow.png";
 
 export default function HomePageHeading() {
   return (
-    <div className="container flex items-center lg:items-start w-full lg:w-1/2 px-4 lg:px-0">
+    <div className="container flex items-center lg:items-start w-full lg:w-full px-4 lg:px-0">
       <img
-        src="src/assets/RightArrow.png"
-        alt="RightArrow"
-        className="w-16 lg:w-30 mb-4"
+        src={rightArrow}
+        alt="Right Arrow"
+        className="w-8 sm:w-12 md:w-16 lg:w-20 xl:w-30 mb-2 sm:mb-4 flex-shrink-0"
       />
-      <div className="flex flex-col items-center lg:items-start gap-8">
-        <div className="flex flex-col gap-2 text-center lg:text-left">
+      <div className="flex flex-col items-center lg:items-start gap-4 sm:gap-6 md:gap-8 ml-2 sm:ml-4">
+        <div className="flex flex-col gap-1 sm:gap-2 text-center lg:text-left">
+          {" "}
           <h1
-            className="uppercase font-poppins font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white"
+            className="uppercase font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white leading-tight"
             id="Skip">
-            Front-end
+            Web dev &
           </h1>
-          <h1 className="uppercase font-poppins font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-[#00ADB5]">
-            enthusiast
+          <h1 className="uppercase font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-[#00ADB5] leading-tight">
+            Cyber Security enthusiast
           </h1>
         </div>
-        {/* Make buttons stack on mobile */}
-        <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-9 w-full">
-          <Button Text="Hire me" />
-          <Button Text="Download cv" bgColor={0} />
+        {/* Enhanced mobile-first button layout */}
+        <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 md:gap-6 w-full">
+          <a
+            href="#Contact"
+            className="bg-cyanThm hover:bg-cyanThm/90 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-center text-sm sm:text-base">
+            Hire Me
+          </a>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-2 border-cyanThm text-cyanThm hover:bg-cyanThm hover:text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-all duration-300 hover:scale-105 text-center text-sm sm:text-base">
+            Download CV
+          </a>
         </div>
       </div>
     </div>

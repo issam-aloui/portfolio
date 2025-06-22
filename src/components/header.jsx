@@ -1,15 +1,31 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Anchor from "./anchor";
 
 export default function Header({
   Texts = ["Logo", "Home", "About", "Contact"],
   navLinks = ["#home", "#about", "#contact"],
 }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className="container flex justify-between p-5 border-b-2 border-greyThm  z-10">
-      <p className="font-oswald font-bold text-2xl text-whiteThm">{Texts[0]}</p>
+    <header className="container flex justify-between items-center p-5 border-b-2 border-greyThm/50 backdrop-blur-sm bg-darkBlueThm/90 sticky top-0 z-50">
+      <div className="font-poppins font-bold text-2xl text-whiteThm tracking-wider">
+        {Texts[0].replace("IssamAloui", "Issam Aloui")}
+      </div>
+
+      {/* Desktop Navigation */}
       <nav className="hidden md:block">
-        <ul className="flex">
+        <ul className="flex space-x-2">
           {Texts.slice(1).map((text, index) => (
             <li key={navLinks[index]}>
               <Anchor Text={text} link={navLinks[index]} />
@@ -17,6 +33,34 @@ export default function Header({
           ))}
         </ul>
       </nav>
+
+      {/* Mobile Menu Button */}
+      <button
+        className="md:hidden text-whiteThm text-2xl p-2 hover:text-cyanThm transition-colors"
+        onClick={toggleMenu}
+        aria-label="Toggle menu">
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className="absolute top-full left-0 right-0 bg-darkBlueThm/95 backdrop-blur-sm border-b border-greyThm/50 md:hidden">
+          <nav className="container py-4">
+            <ul className="flex flex-col space-y-2">
+              {Texts.slice(1).map((text, index) => (
+                <li key={navLinks[index]}>
+                  <a
+                    href={navLinks[index]}
+                    onClick={handleLinkClick}
+                    className="block px-4 py-3 text-whiteThm hover:text-cyanThm hover:bg-greyThm/20 rounded-lg transition-all duration-300 font-poppins">
+                    {text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

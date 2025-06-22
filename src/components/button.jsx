@@ -24,7 +24,6 @@ export default function Button({ Text, onClick, bgColor = 1, id }) {
     "hover:shadow-[5px_5px_12px_rgba(0,0,0,0.35)]";
   const secondaryActiveBoxShadow =
     "active:shadow-[2px_2px_4px_rgba(0,0,0,0.45)]";
-
   return (
     <button
       className={`text-whiteThm ${
@@ -35,11 +34,11 @@ export default function Button({ Text, onClick, bgColor = 1, id }) {
           : `bg-greyThm hover:bg-greyThm/90 
              ${secondaryTextShadow} ${secondaryHoverTextShadow} ${secondaryActiveTextShadow}
              ${secondaryBoxShadow} ${secondaryHoverBoxShadow} ${secondaryActiveBoxShadow}`
-      } text-lg rounded-3xl px-8 py-2 font-poppins font-bold cursor-pointer
+      } text-sm sm:text-base lg:text-lg rounded-2xl sm:rounded-3xl px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 font-poppins font-bold cursor-pointer
       relative overflow-hidden transition-all duration-300 
-      hover:scale-105
+      hover:scale-102 sm:hover:scale-105
       before:absolute before:inset-0 before:bg-white/10 before:translate-x-[-100%] before:transition-transform before:duration-300
-      hover:before:translate-x-0 before:rounded-3xl
+      hover:before:translate-x-0 before:rounded-2xl sm:before:rounded-3xl
       after:absolute after:inset-0 after:bg-black/20 after:opacity-0 after:transition-opacity after:duration-300
       active:scale-95 active:after:opacity-100
       disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-none
