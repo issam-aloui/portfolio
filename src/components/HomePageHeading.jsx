@@ -3,15 +3,15 @@ import rightArrow from "../assets/RightArrow.png";
 
 export default function HomePageHeading() {
   return (
-    <div className="container flex items-center lg:items-start w-full lg:w-full px-4 lg:px-0">
+    <div className="container flex justify-center lg:justify-start lg:items-start w-full px-4 lg:px-0">
+      {/* Arrow - hidden on mobile, visible on desktop */}
       <img
         src={rightArrow}
         alt="Right Arrow"
-        className="w-8 sm:w-12 md:w-16 lg:w-20 xl:w-30 mb-2 sm:mb-4 flex-shrink-0"
+        className="hidden lg:block w-20 xl:w-24 mb-2 sm:mb-4 flex-shrink-0"
       />
-      <div className="flex flex-col items-center lg:items-start gap-4 sm:gap-6 md:gap-8 ml-2 sm:ml-4">
+      <div className="flex flex-col items-center lg:items-start gap-4 sm:gap-6 md:gap-8 lg:ml-2 xl:ml-4">
         <div className="flex flex-col gap-1 sm:gap-2 text-center lg:text-left">
-          {" "}
           <h1
             className="uppercase font-poppins font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-white leading-tight"
             id="Skip">
@@ -22,7 +22,7 @@ export default function HomePageHeading() {
           </h1>
         </div>
         {/* Enhanced mobile-first button layout */}
-        <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 md:gap-6 w-full">
+        <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 md:gap-6 w-full max-w-md lg:max-w-none">
           <a
             href="#Contact"
             className="bg-cyanThm hover:bg-cyanThm/90 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-center text-sm sm:text-base">
