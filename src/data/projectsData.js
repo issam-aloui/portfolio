@@ -1,5 +1,6 @@
 // Sample project data - replace with real projects
 import gymFitImage from "../assets/gymFit.png";
+import youtubeCloneImage from "../assets/YouTube.jpg";
 
 export const projectsData = {
   web: [
@@ -21,6 +22,24 @@ export const projectsData = {
         "OpenStreet API",
         "OpenCage API",
         "Cloudinary API",
+      ],
+      category: "web",
+    },
+    {
+      id: 2,
+      title: "YouTube Clone | Video Streaming Platform",
+      description:
+        "A responsive YouTube clone featuring video browsing, search functionality, responsive design, and modern UI components with smooth animations and user interactions.",
+      image: youtubeCloneImage,
+      link: "https://github.com/issam-aloui/youtube-clone",
+      liveLink: "https://issam-aloui.github.io/youtube-clone/",
+      technologies: [
+        "React",
+
+        "Tailwind CSS",
+        "Chakra UI",
+        "JavaScript",
+        "React Router",
       ],
       category: "web",
     },
