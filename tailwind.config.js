@@ -7,7 +7,7 @@ export default {
         whiteThm: "#eeeeee",
         cyanThm: "#00adb5",
         greyThm: "#393e46",
-        darkBlueThm: "#222831",
+        darkBlueThm: "#0a0e14",
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],

@@ -18,7 +18,7 @@ export default function Header({
   };
 
   return (
-    <header className="container flex justify-between items-center p-5 border-b-2 border-greyThm/50 backdrop-blur-sm bg-darkBlueThm/90 sticky top-0 z-50">
+    <header className="container flex justify-between items-center p-5 border-b border-cyanThm/10 backdrop-blur-xl bg-transparent sticky top-0 z-50">
       <div className="font-poppins font-bold text-2xl text-whiteThm tracking-wider">
         {Texts[0].replace("IssamAloui", "Issam Aloui")}
       </div>
@@ -44,7 +44,7 @@ export default function Header({
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-darkBlueThm/95 backdrop-blur-sm border-b border-greyThm/50 md:hidden">
+        <div className="absolute top-full left-0 right-0 bg-black/20 backdrop-blur-xl border-b border-cyanThm/10 md:hidden">
           <nav className="container py-4">
             <ul className="flex flex-col space-y-2">
               {Texts.slice(1).map((text, index) => (

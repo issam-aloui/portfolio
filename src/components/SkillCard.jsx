@@ -31,7 +31,7 @@ export default function SkillCard({ icon, title, description, level = 0 }) {
 
   return (
     <div
-      className={`bg-greyThm/20 backdrop-blur-sm rounded-2xl p-4 sm:p-6 hover:bg-greyThm/30 transition-all duration-300 hover:scale-102 sm:hover:scale-105 hover:shadow-xl border border-greyThm/30 hover:${skillStyle.borderColor} hover:${skillStyle.glowColor} relative overflow-hidden`}>
+      className={`bg-black/20 backdrop-blur-md rounded-2xl p-4 sm:p-6 hover:bg-black/30 transition-all duration-300 hover:scale-102 sm:hover:scale-105 hover:shadow-xl hover:shadow-cyanThm/10 border border-cyanThm/10 hover:${skillStyle.borderColor} hover:${skillStyle.glowColor} relative overflow-hidden animate-on-scroll scale-in`}>
       {/* Decorative corner accent */}
       <div
         className={`absolute top-0 right-0 w-12 h-12 ${skillStyle.accentColor} rounded-bl-2xl opacity-50`}></div>

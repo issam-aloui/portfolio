@@ -100,33 +100,34 @@ export default function Skills() {
   ];
   return (
     <section
-      className="min-h-screen bg-gradient-to-br from-darkBlueThm to-greyThm/20 py-12 sm:py-16 md:py-20"
+      className="min-h-screen bg-black/20 backdrop-blur-sm py-12 sm:py-16 md:py-20 relative"
       id="Skills">
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6 relative z-0">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-on-scroll fade-in-down animate-visible">
             My <span className="text-cyanThm">Skills</span>
           </h2>{" "}
-          <p className="text-whiteThm/70 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-whiteThm/70 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed animate-on-scroll fade-in-up animate-visible stagger-1">
             A comprehensive overview of my technical expertise and proficiency
             levels. I&apos;m constantly learning and improving these skills
             through practical projects and continuous study.
           </p>
         </div>{" "}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {skills.map((skill) => (
-            <SkillCard
-              key={skill.title}
-              icon={skill.icon}
-              title={skill.title}
-              description={skill.description}
-              level={skill.level}
-            />
+          {skills.map((skill, index) => (
+            <div key={skill.title} className={`stagger-${Math.min(index % 8 + 1, 8)}`}>
+              <SkillCard
+                icon={skill.icon}
+                title={skill.title}
+                description={skill.description}
+                level={skill.level}
+              />
+            </div>
           ))}
         </div>{" "}
         {/* Additional Info */}
-        <div className="mt-12 sm:mt-16 text-center">
-          <div className="bg-gradient-to-br from-cyanThm/10 via-greyThm/20 to-cyanThm/5 rounded-2xl p-4 sm:p-6 md:p-8 backdrop-blur-sm border-2 border-cyanThm/30 shadow-lg shadow-cyanThm/10 relative overflow-hidden">
+        <div className="mt-12 sm:mt-16 text-center animate-on-scroll fade-in-up animate-visible stagger-8">
+          <div className="bg-gradient-to-br from-cyanThm/10 via-greyThm/20 to-cyanThm/5 rounded-2xl p-4 sm:p-6 md:p-8 backdrop-blur-sm border-2 border-cyanThm/30 shadow-lg shadow-cyanThm/10 relative overflow-hidden hover:border-cyanThm/50 hover:shadow-cyanThm/20 transition-all duration-500">
             {/* Decorative elements */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyanThm/60 to-transparent"></div>
             <div className="absolute bottom-0 right-0 w-1/3 h-1 bg-gradient-to-l from-cyanThm/40 to-transparent"></div>

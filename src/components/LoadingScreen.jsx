@@ -15,7 +15,7 @@ export default function LoadingScreen() {
   if (!isLoading) return null;
 
   return (
-    <div className="fixed inset-0 bg-darkBlueThm z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-[#0a0e14] z-50 flex items-center justify-center">
       <div className="text-center">
         {/* Loading Animation */}
         <div className="relative">

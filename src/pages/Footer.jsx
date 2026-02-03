@@ -26,7 +26,7 @@ function Footer() {
     <FaGithub key="github" />,
   ];
   return (
-    <footer className="bg-greyThm/30 backdrop-blur-sm py-8 sm:py-12 px-4 sm:px-6 border-t border-greyThm/50">
+    <footer className="bg-black/30 backdrop-blur-md py-8 sm:py-12 px-4 sm:px-6 border-t border-cyanThm/20">
       <div className="max-w-6xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 lg:gap-16 mb-6 sm:mb-8">

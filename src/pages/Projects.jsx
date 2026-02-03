@@ -13,15 +13,15 @@ function Projects() {
   const currentProjects = projectsData[activeCategory] || [];
   return (
     <section
-      className="min-h-screen bg-gradient-to-br from-greyThm/10 to-darkBlueThm py-12 sm:py-16 md:py-20"
+      className="min-h-screen bg-black/20 backdrop-blur-sm py-12 sm:py-16 md:py-20 relative"
       id="Projects">
       {/* Content container */}
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto px-4 sm:px-6 relative z-0">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-on-scroll fade-in-down animate-visible">
             My Recent <span className="text-cyanThm">Works</span>
           </h2>
-          <p className="text-whiteThm/70 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8">
+          <p className="text-whiteThm/70 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 animate-on-scroll fade-in-up animate-visible stagger-1">
             Here are some of my recent projects that showcase my skills in web
             development, problem-solving, and attention to detail. Each project
             represents a unique challenge and learning experience.
@@ -45,8 +45,10 @@ function Projects() {
         </div>
         {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          {currentProjects.map((project) => (
-            <EnhancedProjectCard key={project.id} project={project} />
+          {currentProjects.map((project, index) => (
+            <div key={project.id} className={`stagger-${Math.min(index % 6 + 1, 6)}`}>
+              <EnhancedProjectCard project={project} />
+            </div>
           ))}
         </div>
         {/* No Projects Message */}

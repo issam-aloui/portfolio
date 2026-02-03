@@ -15,7 +15,7 @@ function ProjectCard({ url, link }) {
 
   return (
     <div
-      className={`fade-enter bg-greyThm/50 rounded-3xl px-4 overflow-hidden aspect-[${aspectRatio}] hover:scale-105 transition-transform duration-300`}>
+      className={`fade-enter bg-greyThm/30 backdrop-blur-sm rounded-3xl px-4 overflow-hidden aspect-[${aspectRatio}] hover:scale-105 transition-all duration-300 border border-cyanThm/10 hover:border-cyanThm/30 animate-on-scroll scale-in`}>
       <a href={link} target="_blank" rel="noopener noreferrer">
         <img src={url} alt="Project" className="w-full h-full object-cover" />
       </a>

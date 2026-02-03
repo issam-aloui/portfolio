@@ -31,7 +31,7 @@ export default function Button({ Text, onClick, bgColor = 1, id }) {
           ? `bg-cyanThm hover:bg-cyanThm/90 
              ${primaryTextShadow} ${primaryHoverTextShadow} ${primaryActiveTextShadow}
              ${primaryBoxShadow} ${primaryHoverBoxShadow} ${primaryActiveBoxShadow}`
-          : `bg-greyThm hover:bg-greyThm/90 
+          : `bg-black/40 backdrop-blur-md hover:bg-black/50 border border-cyanThm/20 hover:border-cyanThm/40
              ${secondaryTextShadow} ${secondaryHoverTextShadow} ${secondaryActiveTextShadow}
              ${secondaryBoxShadow} ${secondaryHoverBoxShadow} ${secondaryActiveBoxShadow}`
       } text-sm sm:text-base lg:text-lg rounded-2xl sm:rounded-3xl px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 font-poppins font-bold cursor-pointer

@@ -3,10 +3,10 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function ProjectCard({ project }) {
   return (
-    <div className="bg-greyThm/20 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-greyThm/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-greyThm/30 group">
+    <div className="bg-black/20 backdrop-blur-md rounded-2xl overflow-hidden hover:bg-black/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyanThm/10 border border-cyanThm/10 hover:border-cyanThm/30 group animate-on-scroll scale-in flex flex-col h-full">
       {" "}
       {/* Project Image */}
-      <div className="relative overflow-hidden h-48">
+      <div className="relative overflow-hidden h-48 flex-shrink-0">
         <img
           src={project.image}
           alt={project.title}
@@ -15,11 +15,11 @@ export default function ProjectCard({ project }) {
         <div className="absolute inset-0 bg-gradient-to-t from-darkBlueThm/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       {/* Project Info */}
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold text-whiteThm mb-2 group-hover:text-cyanThm transition-colors">
           {project.title}
         </h3>
-        <p className="text-whiteThm/70 text-sm mb-4 leading-relaxed">
+        <p className="text-whiteThm/70 text-sm mb-4 leading-relaxed flex-grow">
           {project.description}
         </p>
         {/* Technologies */}

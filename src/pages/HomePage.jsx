@@ -36,18 +36,18 @@ export default function HomePage() {
       />{" "}
       {/* Main content container with full height - enhanced mobile layout */}
       <div className="container flex-1 flex flex-col lg:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-8 py-4 sm:py-6 md:py-8 px-4 sm:px-6">
-        <div className="order-2 lg:order-1 w-full lg:w-1/2">
+        <div className="order-2 lg:order-1 w-full lg:w-1/2 animate-on-scroll fade-in-left animate-visible">
           <HomePageHeading />
         </div>
-        <div className="order-1 lg:order-2 w-full sm:max-w-[350px] md:max-w-[400px] lg:max-w-[500px] lg:w-1/2">
+        <div className="order-1 lg:order-2 w-full sm:max-w-[350px] md:max-w-[400px] lg:max-w-[500px] lg:w-1/2 animate-on-scroll fade-in-right animate-visible stagger-2">
           <HomePageVisual />
         </div>
       </div>{" "}
       {/* Arrow section at bottom - responsive spacing */}
-      <div className="flex justify-center items-center py-4 sm:py-6 md:py-8">
+      <div className="flex justify-center items-center py-4 sm:py-6 md:py-8 animate-on-scroll fade-in-up animate-visible stagger-3">
         <a
           href="#About"
-          className="flex flex-col items-center text-whiteThm hover:opacity-80 transition-opacity">
+          className="flex flex-col items-center text-whiteThm hover:opacity-80 transition-all duration-300 hover:translate-y-1">
           <FaArrowDown className="text-4xl sm:text-5xl md:text-6xl animate-bounce bg-greyThm opacity-75 p-1.5 sm:p-2 rounded-lg" />
         </a>
       </div>
