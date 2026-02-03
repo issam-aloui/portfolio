@@ -11,7 +11,7 @@ export const projectsData = {
         "A comprehensive gym management system platform featuring member management, workout tracking, and location services with real-time updates.",
       image: gymFitImage,
       link: "https://github.com/issam-aloui/Gym_Management_System",
-      liveLink: null, // Demo not available
+      liveLink: "https://gym-management-system-1-2kke.onrender.com/",
       technologies: [
         "MongoDB",
         "Node.js",
